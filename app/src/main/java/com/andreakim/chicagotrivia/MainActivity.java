@@ -15,11 +15,12 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+//this project is unfinished
 
     private Chicago[] mChicago = new Chicago[10];
     private Button mBtnFalse;
     private Button mBtnTrue;
-    private TextView mTextview2;
+    private TextView mTextView2;
     private TextView mTxtAttempts;
     private TextView mTxtScore;
     private Toast mToast;
@@ -73,7 +74,15 @@ public class MainActivity extends AppCompatActivity {
 
         mBtnTrue = (Button) findViewById(R.id.true_button);
         mBtnFalse = (Button) findViewById(R.id.false_button);
-        mTextview2 = (TextView) findViewById(R.id.text_view_2);
+        mTextView2 = (TextView) findViewById(R.id.text_view_2);
+
+        mTextView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+
+        });
+
 
         mTxtScore = (TextView) findViewById(R.id.txt_score);
         mTxtAttempts = (TextView) findViewById(R.id.txt_user_attempts);
@@ -85,13 +94,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mBtnFalse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                submitAnswer(false, mChicago[currentQuestion].isTrue);
-            }
-        });
+
+
+    mBtnFalse.setOnClickListener(new View.OnClickListener(){
+
+        @Override
+        public void onClick (View v){
+        submitAnswer(false, mChicago[currentQuestion].isTrue);
     }
+    }
+
+    );
 
     private void displayToast(String msg) {
         mToast.makeText(this, msg, Toast.LENGTH_LONG);
@@ -104,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             score++;
         }
         mTxtAttempts.setText("Attempts: " + Integer.toString(attempts));
-        mTxtScore.setText("Score: " + Integer.toString(score));
+        mTxtScore.setText("No. of Correct Answers: " + Integer.toString(score));
     }
 
     private boolean submitAnswer(boolean answer, boolean isTrue) {
@@ -112,21 +125,21 @@ public class MainActivity extends AppCompatActivity {
         if (isTrue == false && answer == false) {
             isCorrect = true;
             displayToast("You are correct! This was a false one.");
+            changeQuestion();
         } else if (isTrue == true && answer == true) {
             displayToast("You are correct! This is 100% true!");
             isCorrect = true;
+            changeQuestion();
         } else {
             displayToast("Sorry, you guessed wrong!");
-            // wrong answer
+            changeQuestion();
+
         }
         updateScore(isCorrect);
-        changeQuestion();
-        updateQuestion();
         return isCorrect;
     }
 
-
-    public void changeQuestion() {
+    public void changeQuestion(Chicago[mChicago]) {
         if (currentQuestion < mChicago.length) {
             updateQuestion(mChicago);
             currentQuestion++;
@@ -134,13 +147,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void updateQuestion(Chicago[currentQuestion]) {
+    public void updateQuestion(Chicago[mChicago]) {
         if (currentQuestion < mChicago.length) {
             updateQuestion(mChicago);
             currentQuestion++;
         }
     }
+
     public void setmChicago(Chicago[] mChicago) {
         this.mChicago = mChicago;
     }
+}
 }

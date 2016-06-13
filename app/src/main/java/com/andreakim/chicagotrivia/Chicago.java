@@ -5,6 +5,11 @@ import java.util.Random;
 /**
  * Created by andreakim on 6/9/16.
  */
+
+
+//this project is unfinished
+
+
 public class Chicago {
 
     String mTrivia;

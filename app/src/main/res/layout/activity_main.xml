@@ -38,7 +38,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:gravity="fill_vertical"
-        android:text="@string/getQuestion"
         android:textAllCaps="true"
         android:textSize="20sp"
         android:textStyle="bold" />

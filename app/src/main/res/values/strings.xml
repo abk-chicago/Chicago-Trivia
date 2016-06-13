@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Chicago Trivia</string>
 
-    <string name="getQuestion">Questions will be displayed here.</string>
+
     <string name="letsPlay">Let\'s Play Chicago Trivia!</string>
     <string name="plsClick">Choose TRUE or FALSE</string>
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_4a103169792e64080514ca2165f724b121868c1d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_c3096f9a01ee9bb42ed31fca57abc3bbd8698f57/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_a1db7581c73a469ca5fb614a88c4d1f0d8f9bb45/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="eae51c0315fe4110cd623ecdeebe78b6fe719064">
+        <dex dex="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5d62568d70f45b3531091248c8a9a16e88f0b838/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="cda3e1f46463e848af1910f949609724f5b2ba66">
+        <dex dex="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c2c3a172ede3c93d28774a0a5f0c47185346c4fa/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_5bcc0272f94df9bee08382eebc2441df4196664e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_df5aa48e092dacc7df05a382fbd868c39fd884ca/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/andreakim/adi/ChicagoTrivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_61ffb731d906cd705c392fb8a290b775ee7b6e86/classes.dex" />
+    </item>
+
+</items>

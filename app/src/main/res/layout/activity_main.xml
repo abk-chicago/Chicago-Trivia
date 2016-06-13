@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEE9B1"
+    android:gravity="center_horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/chicago_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:gravity="top"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chicago"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/text_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chicago_photo"
+        android:gravity="center_horizontal"
+        android:text="@string/letsPlay"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/text_play"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="fill_vertical"
+        android:text="@string/getQuestion"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/get_question"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/text_view_2"
+        android:layout_marginTop="10dp"
+        android:background="#732B3C"
+        android:text="Get a question"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/make_choice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/get_question"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/plsClick"
+        android:textSize="18sp" />
+<LinearLayout
+    android:id="@+id/linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/make_choice"
+    android:layout_marginBottom="5dp"
+    android:gravity="center_horizontal">
+
+    <Button
+        android:id="@+id/true_button"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:background="#732B3C"
+        android:text="true"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/false_button"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="#732B3C"
+        android:text="false"
+        android:textColor="#ffffff"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linear_layout"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_user_attempts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:text="Attempts: 0"
+        android:textAlignment="textStart"
+       />
+
+    <TextView
+        android:id="@+id/txt_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:text="Score: 0"
+        android:textAlignment="textEnd"
+        />
+
+    </LinearLayout>
+</RelativeLayout>
+
+

@@ -11,42 +11,32 @@ import java.util.Random;
 
 
 public class Chicago {
-
     String mTrivia;
-    String mCorrectMessage;
-    String mIncorrectMessage;
     boolean isTrue;
 
     public Chicago() {
 
     }
 
-    public Chicago(String facts, boolean isTrue) {
-        this.mTrivia = facts;
+    public Chicago(String mTrivia, boolean isTrue) {
+        this.mTrivia = mTrivia;
         this.isTrue = isTrue || false;
     }
 
-    public String getTrivia() {
+    public boolean isTrue() {
+        return isTrue;
+    }
+
+    public void setTrue(boolean aTrue) {
+        isTrue = aTrue;
+    }
+
+    public String getmTrivia() {
+
         return mTrivia;
     }
 
-    public void setCorrectMessage(String correctMessage) {
-        mCorrectMessage = correctMessage;
+    public void setmTrivia(String mTrivia) {
+        this.mTrivia = mTrivia;
     }
-
-    public String getCorrectMessage() {
-        return mCorrectMessage;
-    }
-
-    public void setIncorrectMessage(String incorrectMessage) {
-        mIncorrectMessage = incorrectMessage;
-    }
-
-    public String getIncorrectMessage() {
-        return mIncorrectMessage;
-    }
-
-
-
-
 }

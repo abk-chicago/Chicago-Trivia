@@ -101,22 +101,26 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/true_button" />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true">
     <TextView
         android:id="@+id/txt_user_attempts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:paddingRight="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="4dp"
         android:text="@string/attempts"
-        android:textStyle="bold"
-        android:layout_alignTop="@+id/txt_score"
-        android:layout_toRightOf="@+id/chicago_photo"
-        android:layout_toEndOf="@+id/chicago_photo" />
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/num_attempts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="000"
         android:layout_alignParentBottom="true"
         />
     <TextView
@@ -124,21 +128,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="4dp"
         android:paddingRight="4dp"
         android:text="@string/correct"
         android:textAlignment="viewEnd"
-        android:textStyle="bold"
-        android:layout_above="@+id/num_attempts"
-        android:layout_toLeftOf="@+id/true_button"
-        android:layout_toStartOf="@+id/true_button" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/num_correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:text="000"
         android:layout_gravity="end" />
-
+</LinearLayout>
 
 </RelativeLayout>
 

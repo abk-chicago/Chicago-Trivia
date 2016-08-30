@@ -26,10 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTxtScore;
 
     int randomInt;
-    public int score;
-    public int attempts;
-    public String attemptNum = String.valueOf(attempts);
-    public String totScore = String.valueOf(score);
+    private int attempts;
+    private int score;
+
 
 // I haven't figured out how to display this (below) with the Toast yet...
 
@@ -42,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         String trivia1 = getString(R.string.trivia1);
         String trivia2 = getString(R.string.trivia2);
@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         String trivia9 = getString(R.string.trivia9);
         String trivia10 = getString(R.string.trivia10);
 
-
         mChicago[0] = new Chicago(trivia1, true);
         mChicago[1] = new Chicago(trivia2, false);
         mChicago[2] = new Chicago(trivia3, true);
@@ -67,9 +66,6 @@ public class MainActivity extends AppCompatActivity {
         mChicago[8] = new Chicago(trivia9, true);
         mChicago[9] = new Chicago(trivia10, false);
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         mBtnTrue = (Button) findViewById(R.id.true_button);
         mBtnFalse = (Button) findViewById(R.id.false_button);
         mTextView2 = (TextView) findViewById(R.id.text_view_2);
@@ -77,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
         mTxtScore = (TextView) findViewById(R.id.num_correct);
         mTxtAttempts = (TextView) findViewById(R.id.num_attempts);
 
-        mTxtAttempts.setText(attemptNum);
-        mTxtScore.setText(totScore);
 
         mBtnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,23 +81,20 @@ public class MainActivity extends AppCompatActivity {
                 int randomNum = rand.nextInt(10);
                 randomInt = randomNum;
                 playGame(randomInt);
-
             }
         });
 
         mBtnTrue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (mChicago[randomInt].isTrue()) {
+                    increaseScore();
+                    updateTotals();
                     Toast.makeText(getApplicationContext(), mCorrectMessage, Toast.LENGTH_LONG).show();
-                    increaseCorrect();
-                    increaseTotal();
                 } else {
+                    updateTotals();
                     Toast.makeText(getApplicationContext(), mIncorrectMessage, Toast.LENGTH_LONG).show();
-                    increaseTotal();
                 }
-
             }
         });
 
@@ -112,34 +103,32 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (mChicago[randomInt].isTrue()) {
                     Toast.makeText(getApplicationContext(), mIncorrectMessage, Toast.LENGTH_LONG).show();
-                    increaseTotal();
+                    updateTotals();
                 } else {
                     Toast.makeText(getApplicationContext(), mCorrectMessage, Toast.LENGTH_LONG).show();
-                    increaseCorrect();
-                    increaseTotal();
+                    updateTotals();
+                    increaseScore();
                 }
-
             }
         });
     }
 
     public void playGame(int randomNum) {
-
         mTextView2.setText(mChicago[randomNum].getmTrivia());
 
     }
 
 
-    public void increaseTotal(){
+    public void updateTotals() {
         attempts++;
-        mTxtAttempts.setText(attemptNum);
-        mTxtScore.setText(totScore);
+        mTxtAttempts.setText(Integer.toString(attempts));
+        mTxtScore.setText(Integer.toString(score));
     }
 
-    public void increaseCorrect(){
+    public void increaseScore() {
         score++;
-        mTxtAttempts.setText(attemptNum);
-        mTxtScore.setText(totScore);
+        mTxtAttempts.setText(Integer.toString(attempts));
+        mTxtScore.setText(Integer.toString(score));
     }
 
 }

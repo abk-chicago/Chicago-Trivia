@@ -26,7 +26,7 @@
         jar="/Users/andreakim/adi/Chicago-Trivia/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="779782d82fada551742c6de1d7970c6fdd149ca3">
+        sha1="b02f74c26b9c70dff50ba8464d0a93a85c65a922">
         <dex dex="/Users/andreakim/adi/Chicago-Trivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a75b5d2855f672be82590f20e62173efc4ed3273/classes.dex" />
     </item>
     <item
@@ -47,7 +47,7 @@
         jar="/Users/andreakim/adi/Chicago-Trivia/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="50c2ebfc79e5f06201abc8ca17c3ad8e5ad3b53e">
+        sha1="27a301e56cf11ec21c0d5e5f1584ac154e8c448b">
         <dex dex="/Users/andreakim/adi/Chicago-Trivia/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_eae1e8a6740a3d1444a5cd6498ad316a10c6924b/classes.dex" />
     </item>
     <item

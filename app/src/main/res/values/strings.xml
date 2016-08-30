@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Chicago Trivia</string>
 
-
     <string name="letsPlay">Let\'s Play Chicago Trivia!</string>
     <string name="plsClick">Choose TRUE or FALSE</string>
 
+    <string name="attempts"># Attempts: </string>
+    <string name="correct"># Correct: </string>
+    <string name="truthie">True</string>
+    <string name="falsie">False</string>
+    <string name="get">Get a question</string>
 </resources>

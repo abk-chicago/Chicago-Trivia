@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private int score;
 
 
-// I haven't figured out how to display this (below) with the Toast yet...
+// not complete: need to make prettier and display this (below) with the Toast ...
 
 //  String trivia2fact = "This statement is false; It is actually the tallest in western hemisphere.";
 //  (trivia2 is false; tallest in western hemisphere)
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         String trivia1 = getString(R.string.trivia1);
         String trivia2 = getString(R.string.trivia2);

@@ -51,7 +51,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="8dp"
-        android:background="@color/button"
+        android:background="@drawable/mybutton"
         android:text="@string/get"
         android:textColor="@color/text"
         android:textSize="16sp"/>
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_weight="1"
-        android:background="@color/button"
+        android:background="@drawable/mybutton"
         android:text="@string/truthie"
         android:textColor="@color/text" />
 
@@ -96,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_weight="1"
-        android:background="@color/button"
+        android:background="@drawable/mybutton"
         android:text="@string/falsie"
         android:textColor="@color/text"
         />

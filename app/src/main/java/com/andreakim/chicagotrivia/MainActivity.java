@@ -15,18 +15,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-//this project is unfinished
-
-    String trivia1 = "The first Ferris wheel made its debut in Chicago at the 1893 World's Columbian Exposition";
-    String trivia2 = "The Willis Tower is the tallest building in the world.";
-    String trivia3 = "Chicago has the largest collection of Impressionist paintings outside of Paris.";
-    String trivia4 = "The term \"Jazz\" was coined in Chicago in 1914.";
-    String trivia5 = "Spray paint was invented in Chicago in 1949.";
-    String trivia6 = "Chicago was incorporated as a city in 1817.";
-    String trivia7 = "The atom was first split (leading to the A bomb and nuclear power) at the University of Chicago.";
-    String trivia8 = "Chicago's nicknames include: The Windy City, the City of Big Shoulders, the Second City, and The City That Works.";
-    String trivia9 = "Chicago River is the only river in the world that flows backward.";
-    String trivia10 = "The Hull House opened in 1923 to aid Chicago immigrants.";
     String mCorrectMessage = "Congratulations, you are CORRECT!";
     String mIncorrectMessage = "Sorry, you are INCORRECT.";
     private Chicago[] mChicago = new Chicago[10];
@@ -36,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTextView2;
     private TextView mTxtAttempts;
     private TextView mTxtScore;
-    private Toast mToast;
-    private int currentQuestion = 0;
-    private int score=0;
-    private int attempts=0;
-    private int randomInt;
 
+    int randomInt;
+    public int score;
+    public int attempts;
+    public String attemptNum = String.valueOf(attempts);
+    public String totScore = String.valueOf(score);
 
 // I haven't figured out how to display this (below) with the Toast yet...
 
@@ -54,6 +42,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        String trivia1 = getString(R.string.trivia1);
+        String trivia2 = getString(R.string.trivia2);
+        String trivia3 = getString(R.string.trivia3);
+        String trivia4 = getString(R.string.trivia4);
+        String trivia5 = getString(R.string.trivia5);
+        String trivia6 = getString(R.string.trivia6);
+        String trivia7 = getString(R.string.trivia7);
+        String trivia8 = getString(R.string.trivia8);
+        String trivia9 = getString(R.string.trivia9);
+        String trivia10 = getString(R.string.trivia10);
+
 
         mChicago[0] = new Chicago(trivia1, true);
         mChicago[1] = new Chicago(trivia2, false);
@@ -73,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
         mBtnFalse = (Button) findViewById(R.id.false_button);
         mTextView2 = (TextView) findViewById(R.id.text_view_2);
         mBtnPlay = (Button) findViewById(R.id.get_question);
+        mTxtScore = (TextView) findViewById(R.id.num_correct);
+        mTxtAttempts = (TextView) findViewById(R.id.num_attempts);
+
+        mTxtAttempts.setText(attemptNum);
+        mTxtScore.setText(totScore);
 
         mBtnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,17 +97,13 @@ public class MainActivity extends AppCompatActivity {
 
                 if (mChicago[randomInt].isTrue()) {
                     Toast.makeText(getApplicationContext(), mCorrectMessage, Toast.LENGTH_LONG).show();
-               //     attempts++;
-               //     score++;
-
-                  //  mTxtAttempts.setText(attempts);
-                  //  mTxtScore.setText(score);
+                    increaseCorrect();
+                    increaseTotal();
                 } else {
                     Toast.makeText(getApplicationContext(), mIncorrectMessage, Toast.LENGTH_LONG).show();
-                 //   attempts++;
-                //    mTxtAttempts.setText(attempts);
-                //    mTxtScore.setText(score);
+                    increaseTotal();
                 }
+
             }
         });
 
@@ -110,16 +112,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (mChicago[randomInt].isTrue()) {
                     Toast.makeText(getApplicationContext(), mIncorrectMessage, Toast.LENGTH_LONG).show();
-                  //  attempts++;
-                 //   mTxtAttempts.setText(attempts);
-                 //   mTxtScore.setText(score);
+                    increaseTotal();
                 } else {
                     Toast.makeText(getApplicationContext(), mCorrectMessage, Toast.LENGTH_LONG).show();
-                //    attempts++;
-                //    score++;
-                //    mTxtAttempts.setText(attempts);
-                //    mTxtScore.setText(score);
+                    increaseCorrect();
+                    increaseTotal();
                 }
+
             }
         });
     }
@@ -129,4 +128,18 @@ public class MainActivity extends AppCompatActivity {
         mTextView2.setText(mChicago[randomNum].getmTrivia());
 
     }
+
+
+    public void increaseTotal(){
+        attempts++;
+        mTxtAttempts.setText(attemptNum);
+        mTxtScore.setText(totScore);
+    }
+
+    public void increaseCorrect(){
+        score++;
+        mTxtAttempts.setText(attemptNum);
+        mTxtScore.setText(totScore);
+    }
+
 }

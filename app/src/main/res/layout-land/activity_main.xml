@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/chicago_photo"
+        android:layout_width="113dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chicago"
+        android:visibility="visible"
+        android:layout_above="@+id/text_view_2"
+        android:layout_toLeftOf="@+id/text_play"
+        android:layout_toStartOf="@+id/text_play"
+        android:layout_marginRight="63dp"
+        android:layout_marginEnd="63dp" />
+
+    <TextView
+        android:id="@+id/text_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/letsPlay"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/chicago_photo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="67dp"
+        android:layout_marginEnd="67dp" />
+
+    <Button
+        android:id="@+id/get_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button"
+        android:text="@string/get"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        android:layout_below="@+id/text_view_2"
+        android:layout_alignLeft="@+id/chicago_photo"
+        android:layout_alignStart="@+id/chicago_photo" />
+
+    <TextView
+        android:id="@+id/make_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plsClick"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/text_view_2"
+        android:layout_alignLeft="@+id/text_play"
+        android:layout_alignStart="@+id/text_play" />
+    <Button
+        android:id="@+id/true_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button"
+        android:text="@string/truthie"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/false_button"
+        android:layout_alignBottom="@+id/false_button"
+        android:layout_alignLeft="@+id/make_choice"
+        android:layout_alignStart="@+id/make_choice" />
+
+    <Button
+        android:id="@+id/false_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button"
+        android:text="@string/falsie"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/get_question"
+        android:layout_alignBottom="@+id/get_question"
+        android:layout_alignRight="@+id/text_play"
+        android:layout_alignEnd="@+id/text_play" />
+
+
+    <TextView
+        android:id="@+id/text_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:textAllCaps="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_weight="0.52"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/get_question"
+        android:layout_alignStart="@+id/get_question"
+        android:layout_alignRight="@+id/text_play"
+        android:layout_alignEnd="@+id/text_play" />
+
+</RelativeLayout>
+
+
